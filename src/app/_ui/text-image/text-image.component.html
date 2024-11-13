@@ -1,0 +1,16 @@
+<app-container [isContainer]="true">
+    <h3>{{appService.getTranslation(mainTitle)}}</h3>
+    <article class="text-image" [ngClass]="{'image-left':leftImage, 'image-right':!leftImage}">
+        <div class="left">
+            <figure *ngIf="image">
+                <img [src]="image" alt="H7Metrology">
+            </figure>
+        </div>
+        <div class="right">
+            <div *ngIf="text && !isCustom" [ngClass]="{'justify':justified}" [innerHTML]=" text | safe:'html' "></div>
+            <ng-container *ngIf="isCustom">
+                <ng-content></ng-content>
+            </ng-container>
+        </div>
+    </article>
+</app-container>

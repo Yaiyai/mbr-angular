@@ -3,7 +3,7 @@ import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, Subscription } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
-import { languagesFalse } from '../../../../assets/languages';
+import { languagesFalse } from '../../../../../public/assets/languages';
 type MessageCallback = (payload: any) => void;
 
 @Injectable({

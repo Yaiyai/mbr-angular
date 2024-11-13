@@ -1,0 +1,45 @@
+<footer>
+    <div class="top">
+        <div class="container">
+            <figure (click)="goHome()">
+                <img [src]="companyService.companyLogoBN" alt="H7metrology Logo BN">
+            </figure>
+            <div class="links">
+                <app-button [isNegative]="true" [label]="'who'" classBtn="link" (click)="navigate('quienes-somos')"></app-button>
+                <app-button [isNegative]="true" [label]="'solutions'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [isNegative]="true" [label]="'dimensional'" classBtn="link" (click)="navigate('control-dimensional')"></app-button>
+                <app-button [isNegative]="true" [label]="'END'" classBtn="link" (click)="navigate('end')"></app-button>
+                <app-button [isNegative]="true" [label]="'engineering'" classBtn="link" (click)="navigate('ingenieria-inversa')"></app-button>
+                <app-button [isNegative]="true" [label]="'print'" classBtn="link" (click)="navigate('impresion-3d')"></app-button>
+            </div>
+            <div class="last">
+                <app-button [isNegative]="true" [label]="'certs'" classBtn="link" (click)="navigate('certificaciones')"></app-button>
+                <app-button [isNegative]="true" [label]="'subs'" classBtn="link" (click)="navigate('subvenciones')"></app-button>
+                <ul class="logos">
+                    <li>
+                        <figure>
+                            <img src="https://res.cloudinary.com/sanroque/image/upload/v1691425020/Logo_PRTR_dos_li%CC%81neas_BLANCO_hcsvuw.png" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://res.cloudinary.com/sanroque/image/upload/v1691425390/ES-Financiado-por-la-Uni%E0%B8%82n-Europea_WHITE-Outline-1024x284-1_psblin.webp" alt="">
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <app-button [noTranslate]="true" [label]="'@' + year + ' ' + companyService.name  + ' ' + design" classBtn="nolink" [isLink]="true" [link]="'https://www.mfi.es/'"></app-button>
+
+            <div class="links">
+                <app-button [label]="'terms'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [label]="'conditions'" classBtn="link" (click)="navigate('/')"></app-button>
+                <app-button [label]="'privacy'" classBtn="link" (click)="navigate('/')"></app-button>
+            </div>
+        </div>
+    </div>
+
+</footer>

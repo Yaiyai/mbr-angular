@@ -1,0 +1,31 @@
+<app-header [bkg]="bkg" [needsBlue]="false" [padding]="200" [isTriangle]="true">
+    <figure>
+        <img [src]="logo" alt="H7metrology Logo BN">
+    </figure>
+    <h1>{{title}}</h1>
+    <figure class="floating-image">
+        <img [src]="floatingImage" alt="H7metrology">
+    </figure>
+</app-header>
+
+<app-container id="soluciones" [isContainer]="true">
+    <h3 class="main">{{appService.getTranslation('who')}}</h3>
+    <div class="features">
+        <article *ngFor="let feat of features" class="box" [innerHTML]=" feat | safe:'html' "></article>
+    </div>
+</app-container>
+
+<section class="solutions-section">
+    <div class="container">
+        <h3>{{appService.getTranslation('solutions')}}</h3>
+        <div class="solutions">
+            <app-list-item [mainTitle]="'dimensional'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509083/web/control.png" link="control-dimensional"></app-list-item>
+            <app-list-item [mainTitle]="'END'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509082/web/end.png" link="end"></app-list-item>
+            <app-list-item [mainTitle]="'engineering'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509082/web/inversa.png" link="ingenieria-inversa"></app-list-item>
+            <app-list-item [mainTitle]="'print'" image="https://res.cloudinary.com/h7metrology/image/upload/v1698509083/web/impresion.png" link="impresion-3d"></app-list-item>
+        </div>
+    </div>
+</section>
+
+<app-contact></app-contact>
+<app-logos></app-logos>

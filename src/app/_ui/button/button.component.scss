@@ -1,0 +1,107 @@
+.my-button {
+  cursor: pointer;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-family: "Saira Semi Condensed", sans-serif;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 300;
+
+  &.link,
+  &.nav,
+  &.nolink {
+    color: var(--main);
+    font-weight: 400;
+    border-radius: 0;
+    padding: 8px;
+    &.negative {
+      color: white;
+    }
+  }
+
+  &.nav {
+    border-bottom: 0.5px solid transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    &:hover {
+      border-color: var(--main);
+    }
+  }
+
+  &.link {
+    border-bottom: 0.5px solid transparent;
+    &:hover {
+      border-color: var(--main);
+    }
+  }
+
+  &.main {
+    background-color: var(--main);
+    border: none;
+    span,
+    i,
+    svg {
+      color: white;
+    }
+    &:hover {
+      background-color: var(--secondary);
+      span,
+      i,
+      svg {
+        color: var(--main);
+      }
+    }
+  }
+
+  &.white {
+    background-color: white;
+    border: none;
+    span {
+      color: var(--main);
+      font-weight: 600;
+    }
+  }
+
+  &.gray {
+    background-color: var(--grey);
+    border: none;
+    span {
+      color: var(--text);
+      font-weight: 300;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: 1px solid var(--main);
+    span {
+      color: var(--main);
+    }
+  }
+
+  &.go {
+    padding: 0;
+    span,
+    i,
+    svg {
+      color: var(--main);
+    }
+  }
+
+  i,
+  svg {
+    font-weight: 600;
+    line-height: 3px;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: auto;
+    text-align: center;
+    white-space: nowrap;
+  }
+}

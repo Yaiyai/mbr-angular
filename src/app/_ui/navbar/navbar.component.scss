@@ -1,0 +1,51 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 8px 0px;
+  border-bottom: 0.5px solid var(--main);
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+figure {
+  width: 124px;
+  height: 44px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  img {
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.container.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 2px;
+  app-button {
+    &:last-of-type {
+      margin-left: 12px;
+    }
+  }
+}
